@@ -103,7 +103,7 @@ window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
   // Pas dit aan om te bepalen hoe snel het beweegt
-  const speedFactor = 0.2;
+  const speedFactor = 0.1;
 
   document.querySelectorAll('.shape_row_noscroll').forEach((row, index) => {
     // Wissel richting per rij, eerste naar rechts, tweede naar links, etc.
