@@ -305,18 +305,17 @@ nav {
 }
 
 .organic-gallery {
-  overflow: hidden;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Laat foto's naar nieuwe regel gaan als nodig */
   gap: 2rem;
-  flex-wrap: nowrap;
-  position: relative;
-  margin-top: 2rem;
+  max-width: 90vw; /* Zorgt dat de hele rij nooit breder is dan viewport */
+  margin: 2rem auto;
 }
 
 .organic-gallery img {
-  width: 250px;
-  height: 250px;
+  width: 15%;
+  height: 15%;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
