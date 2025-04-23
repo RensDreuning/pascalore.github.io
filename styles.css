@@ -305,6 +305,7 @@ nav {
 }
 
 .organic-gallery {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -360,7 +361,6 @@ nav {
 }
 
 .footer__container {
-  display: grid;
   gap: 4rem 0;
   align-items: center;
 }
@@ -454,6 +454,7 @@ nav {
 @media (width > 540px) {
 
   .footer__container {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -516,6 +517,7 @@ nav {
   }
 
   .footer__container {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
