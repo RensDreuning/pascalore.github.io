@@ -36,10 +36,20 @@
   text-align: center;
 }
 
+.section__subheader {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 7px;
+  font-weight: 200;
+  color: black;
+  text-align: center;
+}
+
 .section__description {
   color: var(--dark);
   line-height: 1.75rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .btn {
@@ -246,7 +256,6 @@ nav {
 .about__container .section__description {
   max-width: 900px;
   margin-inline: auto;
-  margin-bottom: 2rem;
 }
 
 .about__container img {
@@ -290,48 +299,56 @@ nav {
   padding-bottom: 2rem;
 }
 
-.eenopeen__images {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.5rem;
-  margin: auto;
-  max-width: 70%;
+.eenopeen__container .section__description {
+  max-width: 900px;
+  margin-inline: auto;
 }
 
-.eenopeen__images > img {
+.organic-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.organic-gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
-.split_circle {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0;
-  width: 100%;
-  aspect-ratio: 1 / 1;
+.organic-gallery img:nth-child(1) {
+  top: 15px;
 }
 
-.splitted_circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-image: var(--img);
-  background-size: auto 200%;
-  background-repeat: no-repeat;
-  background-position: center;
+.organic-gallery img:nth-child(2) {
+  top: -10px;
 }
 
-.shape_eenopeen {
-  width: 100%;
+.organic-gallery img:nth-child(3) {
+  top: 25px;
 }
 
-.part-1 { background-position: 0% 0%; }
-.part-2 { background-position: 100% 0%; }
-.part-3 { background-position: 0% 100%; }
-.part-4 { background-position: 100% 100%; }
+.organic-gallery img:nth-child(4) {
+  top: -15px;
+}
+
+.organic-gallery img:nth-child(5) {
+  top: 5px;
+}
 
 .wiebenik__container {
   padding-bottom: 2rem;
+}
+
+.wiebenik__container .section__description {
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 .headshot {
@@ -484,7 +501,9 @@ nav {
     position: static;
     transform: none;
     flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    gap: 5rem;
     background-color: transparent;
   }
 

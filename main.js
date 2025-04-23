@@ -24,6 +24,11 @@ navLinks.forEach(link => {
         top: adjustedPosition,
         behavior: 'smooth'
       });
+
+        navBar.classList.toggle("open");
+
+        const isOpen = navBar.classList.contains("open");
+        menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
     }
   });
 });
@@ -54,6 +59,10 @@ ScrollReveal().reveal(".relatiecoach__container .section__description", {
   ...scrollRevealOption,
   delay: 200,
 });
+ScrollReveal().reveal(".relatiecoach__images", {
+    ...scrollRevealOption,
+    delay: 200,
+});
 
 ScrollReveal().reveal(".eenopeen__container .section__header", {
   ...scrollRevealOption,
@@ -61,6 +70,10 @@ ScrollReveal().reveal(".eenopeen__container .section__header", {
 ScrollReveal().reveal(".eenopeen__container .section__description", {
   ...scrollRevealOption,
   delay: 200,
+});
+ScrollReveal().reveal(".organic-gallery", {
+    ...scrollRevealOption,
+    delay: 200,
 });
 
 ScrollReveal().reveal(".wiebenik__container .section__header", {
@@ -103,7 +116,7 @@ window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
   // Pas dit aan om te bepalen hoe snel het beweegt
-  const speedFactor = 0.2;
+  const speedFactor = 0.1;
 
   document.querySelectorAll('.shape_row_noscroll').forEach((row, index) => {
     // Wissel richting per rij, eerste naar rechts, tweede naar links, etc.
