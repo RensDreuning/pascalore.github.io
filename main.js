@@ -19,7 +19,7 @@ navLinks.forEach(link => {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-      const adjustedPosition = targetPosition - 50;
+      const adjustedPosition = targetPosition - 140;
       window.scrollTo({
         top: adjustedPosition,
         behavior: 'smooth'

@@ -22,9 +22,9 @@
 }
 
 .section__container {
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 5rem 0;
 }
 
 .section__header {
@@ -196,11 +196,48 @@ nav {
   animation: oscillate 20s ease-in-out infinite alternate;
 }
 
-.shape_row_noscroll {
-  display: flex;
-  transform: translateX(0px);
-  transition: transform 0.05s linear; /* smooth effect */
+.shape_row > img.custom:nth-of-type(1) {
+  object-position: 45% 40%;
 }
+.shape_row > img.custom:nth-of-type(2) {
+  object-position: 35% 40%;
+}
+.shape_row > img.custom:nth-of-type(3) {
+  object-position: 50% 50%;
+}
+.shape_row > img.custom:nth-of-type(4) {
+  object-position: 50% 50%;
+}
+
+.shape_row > img.custom2:nth-of-type(1) {
+  object-position: 50% 50%;
+}
+.shape_row > img.custom2:nth-of-type(2) {
+  object-position: 50% 50%;
+}
+.shape_row > img.custom2:nth-of-type(3) {
+  object-position: 50% 50%;
+}
+.shape_row > img.custom2:nth-of-type(4) {
+  object-position: 50% 62%;
+}
+.shape_row > img.custom2:nth-of-type(5) {
+  object-position: 50% 60%;
+}
+
+.shape_row > img.custom3:nth-of-type(1) {
+  object-position: 50% 50%;
+}
+.shape_row > img.custom3:nth-of-type(2) {
+  object-position: 50% 50%;
+}
+.shape_row > img.custom3:nth-of-type(3) {
+  object-position: 50% 50%;
+}
+.shape_row > img.custom3:nth-of-type(4) {
+  object-position: 50% 50%;
+}
+
 
 .opposite {
   animation: oscillateOpposite 20s ease-in-out infinite alternate;
@@ -279,7 +316,7 @@ nav {
 }
 
 .relatiecoach__container .section__description {
-  max-width: 100%;
+  max-width: 1200px;
   margin-inline: auto;
   color: var(--dark);
 }
@@ -297,6 +334,17 @@ nav {
   height: 100%;
   max-height: 35rem;
   object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.relatiecoach__images img:nth-child(1) {
+  object-position: 50% 60%;
+}
+.relatiecoach__images img:nth-child(2) {
+  object-position: 40% 50%;
+}
+.relatiecoach__images img:nth-child(3) {
+  object-position: 50% 90%;
 }
 
 .eenopeen__container {
@@ -356,7 +404,7 @@ nav {
 }
 
 .wiebenik__container .section__description {
-  max-width: 900px;
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -369,6 +417,11 @@ nav {
   margin-bottom: 2rem;
   border-radius: 50%;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service__container .section__description {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .footer__container {
