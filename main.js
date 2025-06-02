@@ -25,10 +25,10 @@ navLinks.forEach(link => {
         behavior: 'smooth'
       });
 
-        navBar.classList.toggle("open");
+      navBar.classList.toggle("open");
 
-        const isOpen = navBar.classList.contains("open");
-        menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+      const isOpen = navBar.classList.contains("open");
+      menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
     }
   });
 });
@@ -60,8 +60,8 @@ ScrollReveal().reveal(".relatiecoach__container .section__description", {
   delay: 200,
 });
 ScrollReveal().reveal(".relatiecoach__images", {
-    ...scrollRevealOption,
-    delay: 200,
+  ...scrollRevealOption,
+  delay: 200,
 });
 
 ScrollReveal().reveal(".eenopeen__container .section__header", {
@@ -72,8 +72,8 @@ ScrollReveal().reveal(".eenopeen__container .section__description", {
   delay: 200,
 });
 ScrollReveal().reveal(".organic-gallery", {
-    ...scrollRevealOption,
-    delay: 200,
+  ...scrollRevealOption,
+  delay: 200,
 });
 
 ScrollReveal().reveal(".wiebenik__container .section__header", {

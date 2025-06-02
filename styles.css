@@ -232,7 +232,7 @@ nav {
   object-position: 50% 50%;
 }
 .shape_row > img.custom3:nth-of-type(3) {
-  object-position: 50% 50%;
+  object-position: 50% 20%;
 }
 .shape_row > img.custom3:nth-of-type(4) {
   object-position: 50% 50%;
@@ -305,11 +305,17 @@ nav {
   width: 90%;
   margin: 20px auto;
   border-radius: 90px 20px 90px 20px;
-  background-image: linear-gradient(var(--logopurple), var(--logopink));
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  --start: var(--logopurple);
+  --end:   var(--logopink);
+  background: linear-gradient(var(--start), var(--end)) center / cover no-repeat;
 }
+
+.blob__blue   { --start: var(--blue);   --end: var(--blue); }
+.blob__yellow { --start: var(--yellow); --end: var(--yellow); }
+.blob__pink   { --start: var(--pink);   --end: var(--pink); }
+.blob__purple   { --start: var(--purple);   --end: var(--purple); }
+.blob__darkpink   { --start: var(--darkpink);   --end: var(--darkpink); }
 
 .relatiecoach__container .section__header {
   color: black;
@@ -338,7 +344,7 @@ nav {
 }
 
 .relatiecoach__images img:nth-child(1) {
-  object-position: 50% 60%;
+  object-position: 25% 50%;
 }
 .relatiecoach__images img:nth-child(2) {
   object-position: 40% 50%;
@@ -376,7 +382,7 @@ nav {
 
 .organic-gallery img:nth-child(1) {
   top: 15px;
-  object-position: 50% 10%;
+  object-position: 50% 0;
 }
 
 .organic-gallery img:nth-child(2) {
@@ -462,20 +468,25 @@ nav {
 
 .footer__links {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
 }
 
 .footer__links a {
   display: block;
   font-weight: 600;
-  color: var(--dark);
+  color: var(--purple);
   text-align: center;
 }
 
 .footer__links a:hover {
-  color: var(--light);
+  color: var(--pink);
+}
+
+.ri-mail-fill {
+  color: var(--purple);
+}
+
+.ri-phone-fill {
+  color: var(--purple);
 }
 
 .footer__col h4 {
