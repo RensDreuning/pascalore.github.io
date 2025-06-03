@@ -488,7 +488,6 @@ nav {
 }
 
 .footer__col {
-  padding-inline: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -564,8 +563,18 @@ nav {
   text-align: center;
 }
 
-.footer__bar > p {
-  display: inline;
+@media (width > 600px) {
+  .relatiecoach__container .section__subheader {
+    display: none;
+  }
+
+  .eenopeen__container .section__subheader {
+    display: none;
+  }
+
+  .eenopeen__container .short_header {
+    display: none;
+  }
 }
 
 @media (width > 650px) {
@@ -593,7 +602,12 @@ nav {
     grid-area: three;
     width: 100%;
   }
+}
 
+@media (width > 900px) {
+  .footer__bar > p {
+    display: inline;
+  }
 }
 
 @media (width > 1060px) {
@@ -729,6 +743,15 @@ nav {
   .relatiecoach__images > img {
     border-radius: 40px 10px 40px 10px;
   }
+
+  .footer__bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__pipe {
+    display: none; !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -742,6 +765,22 @@ nav {
     margin-left: auto;
     margin-right: auto;
     max-width: 60%;
+  }
+
+  .section__header {
+    font-size: 1.3rem;
+  }
+
+  .section__subheader {
+    font-size: 1.3rem;
+  }
+
+  .relatiecoach__container .subheader {
+    display: none;
+  }
+
+  .eenopeen__header {
+    display: none;
   }
 }
 

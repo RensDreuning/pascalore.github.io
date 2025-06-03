@@ -19,7 +19,13 @@ navLinks.forEach(link => {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-      const adjustedPosition = targetPosition - 140;
+      let adjustedPosition = targetPosition - 130;
+
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 1060) {
+        adjustedPosition = targetPosition - 90;
+      }
+
       window.scrollTo({
         top: adjustedPosition,
         behavior: 'smooth'
@@ -33,6 +39,25 @@ navLinks.forEach(link => {
   });
 });
 
+const logoLink = document.querySelector('.nav__logo a');
+
+if (logoLink) {
+  logoLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetId = logoLink.getAttribute('href');
+    if (targetId === '#') return;
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      let adjustedPosition = targetPosition - 90;
+
+      window.scrollTo({
+        top: adjustedPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+}
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
