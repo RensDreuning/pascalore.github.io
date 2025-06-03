@@ -753,6 +753,10 @@ nav {
     display: none; !important;
   }
 
+  .organic-gallery {
+gap: 0.5rem;
+  }
+
   .organic-gallery .image-wrapper:nth-child(1) img {
   top: 0px;
 }
