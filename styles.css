@@ -752,6 +752,26 @@ nav {
   .footer__pipe {
     display: none; !important;
   }
+
+  .organic-gallery .image-wrapper:nth-child(1) img {
+  top: 0px;
+}
+
+.organic-gallery .image-wrapper:nth-child(2) img {
+  top: 0px;
+}
+
+.organic-gallery .image-wrapper:nth-child(3) img {
+  top: 0px;
+}
+
+.organic-gallery .image-wrapper:nth-child(4) img {
+  top: 0px;
+}
+
+.organic-gallery .image-wrapper:nth-child(5) img {
+  top: 0px;
+}
 }
 
 @media (max-width: 600px) {
