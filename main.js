@@ -122,30 +122,47 @@ ScrollReveal().reveal(".service__container .section__description", {
   delay: 200,
 });
 
-window.addEventListener("resize", updateNavbarPadding);
-document.addEventListener("DOMContentLoaded", updateNavbarPadding);
-
-function updateNavbarPadding() {
-  const firstSection = document.getElementById("nav__padding"); // Pak het eerste element na de navbar
-
-    let navbarHeight = 0;
-
-    const screenWidth = window.innerWidth;
-    if (screenWidth > 1410) {
-        navbarHeight = 134;
-    } else if (screenWidth > 1060) {
-        navbarHeight = 136
-    } else {
-        navbarHeight = 79;
+let navbarHeight = 0;
+let lastWidth = window.innerWidth;
+window.addEventListener("resize", () => {
+    if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+        updateNavbarPadding(1);
     }
+});
+document.addEventListener("DOMContentLoaded", () => updateNavbarPadding(0));
 
-  function updatePadding() {
-    firstSection.style.paddingTop = navbarHeight + "px"; // Pas de padding aan
-  }
 
-  updatePadding(); // Voer direct uit bij laden
+function updateNavbarPadding(isResized) {
+    if ((!isResized && navbarHeight === 0) || isResized) {
+        const firstSection = document.getElementById("nav__padding"); // Pak het eerste element na de navbar
+        const navbar = document.querySelector("nav"); // Pak de navbar
+        navbarHeight = navbar.offsetHeight;
+        let height = 0;
+        const screenWidth = window.innerWidth;
+        if (screenWidth > 1410) {
+            height = 134;
+        } else if (screenWidth > 1060) {
+            height = 136;
+        } else {
+            height = 79;
+        }
 
-};
+        if (navbarHeight < height) {
+            navbarHeight = height;
+        }
+
+        if (navbarHeight > 150) {
+            navbarHeight = 134;
+        }
+
+        function updatePadding() {
+            firstSection.style.paddingTop = navbarHeight + "px"; // Pas de padding aan
+        }
+
+        updatePadding(); // Voer direct uit bij laden
+    }
+}
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
