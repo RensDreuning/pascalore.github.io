@@ -122,20 +122,30 @@ ScrollReveal().reveal(".service__container .section__description", {
   delay: 200,
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector("nav"); // Pak de navbar
+window.addEventListener("resize", updateNavbarPadding);
+document.addEventListener("DOMContentLoaded", updateNavbarPadding);
+
+function updateNavbarPadding() {
   const firstSection = document.getElementById("nav__padding"); // Pak het eerste element na de navbar
 
+    let navbarHeight = 0;
+
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 1410) {
+        navbarHeight = 134;
+    } else if (screenWidth > 1060) {
+        navbarHeight = 136
+    } else {
+        navbarHeight = 79;
+    }
+
   function updatePadding() {
-    const navbarHeight = navbar.offsetHeight; // Bereken de hoogte van de navbar
     firstSection.style.paddingTop = navbarHeight + "px"; // Pas de padding aan
   }
 
   updatePadding(); // Voer direct uit bij laden
 
-  // Voer opnieuw uit als de pagina wordt geresized
-  window.addEventListener("resize", updatePadding);
-});
+};
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
